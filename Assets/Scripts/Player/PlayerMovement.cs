@@ -56,11 +56,11 @@ public class PlayerMovement : MonoBehaviour
         Vector2 moveAlongGround = new Vector2(_groundNormal.y, -_groundNormal.x);
         Vector2 move = moveAlongGround * deltaPosition.x;
 
-        Movement(move, false);
+        Move(move, false);
 
         move = Vector2.up * deltaPosition.y;
 
-        Movement(move, true);
+        Move(move, true);
     }
 
     private void OnEnable()
@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
         _rigidbody.gravityScale = 0;
     }
 
-    private void Movement(Vector2 move, bool yMovement)
+    private void Move(Vector2 move, bool yMovement)
     {
         float distance = move.magnitude;
 

@@ -13,8 +13,8 @@ public class PlayerAnimation : MonoBehaviour
     private void Update()
     {
         if (Input.GetAxis(GlobalVars.HorizontalAxis) > 0.01f || Input.GetAxis(GlobalVars.HorizontalAxis) < -0.01f)
-            _animator.SetBool("isRun", true);
+            _animator.SetBool(PlayerAnimController.IsRun, true);
         else
-            _animator.SetBool("isRun", false);
+            _animator.SetBool(PlayerAnimController.IsRun, false);
     }
 }

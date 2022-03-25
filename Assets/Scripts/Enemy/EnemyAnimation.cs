@@ -10,9 +10,9 @@ public class EnemyAnimation : MonoBehaviour
     private void Update()
     {
         if (_enemyMovement.IsMoving)
-            _animator.SetBool("isRun", true);
+            _animator.SetBool(EnemyAnimController.IsRun, true);
         else
-            _animator.SetBool("isRun", false);
+            _animator.SetBool(EnemyAnimController.IsRun, false);
     }
 
     private void OnEnable()

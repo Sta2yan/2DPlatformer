@@ -14,12 +14,12 @@ public class CoinAnimation : MonoBehaviour
 
     public void Collect()
     {
-        StartCoroutine(PlayCollectAnimation());
+        StartCoroutine(Play());
     }
 
-    private IEnumerator PlayCollectAnimation()
+    private IEnumerator Play()
     {
-        _animator.SetTrigger("Collect");
+        _animator.SetTrigger(CoinAnimController.Collect);
 
         yield return _delay;
 

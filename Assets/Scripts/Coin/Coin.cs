@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class CollectCoin : MonoBehaviour
+public class Coin : MonoBehaviour
 {
     [SerializeField] private UnityEvent _coinReceived;
 
